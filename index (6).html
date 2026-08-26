@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fale com a Mundo Ótico</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#39B59D;
+    --teal-dark:#2C8F7D;
+    --teal-tint:#E6F5F2;
+    --ink:#101111;
+    --ink-2:#2B2C2C;
+    --bg:#F5F7F7;
+    --card:#FFFFFF;
+    --text:#1C1C1C;
+    --muted:#6B7280;
+    --line:#E3E7E7;
+    --err:#B4453A;
+    --err-tint:#F6E5E2;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    position:relative;
+    background:var(--bg);
+    min-height:100vh;
+    font-family:'Inter',sans-serif;
+    color:var(--text);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+    overflow-x:hidden;
+  }
+  .ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+  .ambient span{position:absolute;border-radius:50%;filter:blur(60px);opacity:0.5;}
+  .ambient span:nth-child(1){width:380px;height:380px;top:-140px;left:-100px;background:rgba(57,181,157,0.16);animation:float1 22s ease-in-out infinite;}
+  .ambient span:nth-child(2){width:320px;height:320px;bottom:-120px;right:-100px;background:rgba(16,17,17,0.05);animation:float2 26s ease-in-out infinite;}
+  @keyframes float1{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(30px,40px) scale(1.08);}}
+  @keyframes float2{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-30px,-30px) scale(1.06);}}
+  .brand, .shell{position:relative; z-index:1;}
+
+  .brand{display:flex;align-items:center;justify-content:center;margin-bottom:26px;}
+  .brand img{height:34px;display:block;}
+
+  .shell{width:100%;max-width:420px;}
+
+  .intro{color:var(--ink);text-align:center;margin-bottom:24px;}
+  .intro h1{
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-weight:700;
+    font-size:clamp(22px,5vw,28px);
+    line-height:1.25;
+    margin:0 0 8px;
+    letter-spacing:-0.01em;
+  }
+  .intro p{font-size:14px;color:var(--muted);line-height:1.55;margin:0;}
+
+  .card{
+    background:var(--card);
+    border-radius:14px;
+    padding:30px 28px 28px;
+    box-shadow:0 24px 48px -20px rgba(16,17,17,0.14);
+    border:1px solid var(--line);
+  }
+
+  .field{margin-bottom:18px;}
+  .field label{
+    display:block;
+    font-size:13.5px;
+    font-weight:600;
+    margin-bottom:6px;
+    color:var(--ink-2);
+  }
+  .field input{
+    width:100%;
+    border:1.5px solid var(--line);
+    border-radius:8px;
+    padding:12px 13px;
+    font-family:'Inter',sans-serif;
+    font-size:15px;
+    color:var(--text);
+    background:#fff;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .focus-frame{position:relative;border-radius:10px;}
+  .focus-frame::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:10px;
+    pointer-events:none;
+    opacity:0;
+    transition:opacity .25s ease, inset .25s ease;
+    background:
+      linear-gradient(var(--teal),var(--teal)) top left / 12px 2px no-repeat,
+      linear-gradient(var(--teal),var(--teal)) top left / 2px 12px no-repeat,
+      linear-gradient(var(--teal),var(--teal)) top right / 12px 2px no-repeat,
+      linear-gradient(var(--teal),var(--teal)) top right / 2px 12px no-repeat,
+      linear-gradient(var(--teal),var(--teal)) bottom left / 12px 2px no-repeat,
+      linear-gradient(var(--teal),var(--teal)) bottom left / 2px 12px no-repeat,
+      linear-gradient(var(--teal),var(--teal)) bottom right / 12px 2px no-repeat,
+      linear-gradient(var(--teal),var(--teal)) bottom right / 2px 12px no-repeat;
+  }
+  .focus-frame:focus-within::after{opacity:1;inset:-5px;}
+  .field input:focus{outline:none;}
+  .error-msg{color:var(--err);font-size:12.5px;margin-top:6px;display:none;}
+  .field.invalid input{border-color:var(--err);}
+  .field.invalid .error-msg{display:block;}
+
+  button{
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:15px;
+    border:none;
+    border-radius:8px;
+    padding:13px 26px;
+    cursor:pointer;
+    width:100%;
+    transition:transform .15s, background .15s, box-shadow .2s;
+    position:relative;
+    overflow:hidden;
+  }
+  button:active{transform:scale(0.99);}
+  .btn-primary{background:var(--teal);color:#fff;}
+  .btn-primary::before{
+    content:"";
+    position:absolute;
+    top:0; left:-60%;
+    width:40%; height:100%;
+    background:linear-gradient(115deg, transparent, rgba(255,255,255,0.3), transparent);
+    transform:skewX(-20deg);
+    transition:left .5s ease;
+  }
+  .btn-primary:hover{background:var(--teal-dark);box-shadow:0 10px 22px -8px rgba(44,143,125,0.5);}
+  .btn-primary:hover::before{left:130%;}
+  .btn-primary:disabled{opacity:0.6;cursor:not-allowed;}
+
+  .status-screen{text-align:center;padding:8px 4px 4px;}
+  .status-screen .icon{
+    width:56px;height:56px;border-radius:50%;margin:0 auto 16px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .status-screen.success .icon{background:var(--teal-tint);color:var(--teal-dark);animation:popIn .5s cubic-bezier(.2,1.4,.4,1);}
+  @keyframes popIn{0%{transform:scale(0.4);opacity:0;}70%{transform:scale(1.08);opacity:1;}100%{transform:scale(1);}}
+  .status-screen.success .icon svg{width:26px;height:26px;}
+  .status-screen.success .icon svg path{
+    stroke:var(--teal-dark);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;
+    stroke-dasharray:40;stroke-dashoffset:40;animation:drawCheck .45s ease .35s forwards;
+  }
+  @keyframes drawCheck{to{stroke-dashoffset:0;}}
+  .status-screen.error .icon{background:var(--err-tint);color:var(--err);}
+  .status-screen h2{margin:0 0 6px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:19px;color:var(--ink);}
+  .status-screen p{color:var(--muted);font-size:14px;line-height:1.55;margin:0;}
+  .spinner{
+    width:30px;height:30px;border-radius:50%;
+    border:3px solid var(--line);border-top-color:var(--teal);
+    animation:spin 0.8s linear infinite;margin:6px auto 0;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  @media (max-width:420px){
+    .card{padding:24px 20px 22px;border-radius:10px;}
+    .field input{font-size:16px;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="ambient"><span></span><span></span></div>
+
+  <div class="shell">
+    <div class="brand">
+      <img src="data:image/png;base64,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" alt="Mundo Ótico">
+    </div>
+
+    <div class="intro" id="introBlock">
+      <h1>Fala com a gente!</h1>
+      <p>Preenche rapidinho e te chamamos no WhatsApp.</p>
+    </div>
+
+    <div class="card" id="card">
+      <!-- injected by JS -->
+    </div>
+  </div>
+
+<script>
+// Cole aqui a URL do seu Google Apps Script (termina em /exec)
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxi3I35T1Xur3eDNfFEaKhHPWJWXIyflKG3cOof-58QsnjwmZMslAE7evjPp6D0vYRnRw/exec";
+
+const FIELDS = [
+  {id:"nome_otica", label:"Nome da Ótica", type:"text", required:true},
+  {id:"nome_respondente", label:"Seu nome", type:"text", required:true},
+  {id:"whatsapp", label:"Número com DDD (WhatsApp)", type:"tel", required:true}
+];
+
+const answers = {};
+const card = document.getElementById('card');
+const introBlock = document.getElementById('introBlock');
+
+function maskPhone(value){
+  let d = value.replace(/\D/g,'').slice(0,11);
+  if(d.length <= 2) return d.length ? `(${d}` : '';
+  if(d.length <= 6) return `(${d.slice(0,2)}) ${d.slice(2)}`;
+  if(d.length <= 10) return `(${d.slice(0,2)}) ${d.slice(2,6)}-${d.slice(6)}`;
+  return `(${d.slice(0,2)}) ${d.slice(2,7)}-${d.slice(7)}`;
+}
+
+function fieldHTML(f){
+  return `
+    <div class="field ${f.required ? 'required':''}" data-field="${f.id}">
+      <label for="${f.id}">${f.label}</label>
+      <div class="focus-frame"><input type="${f.type}" id="${f.id}" autocomplete="off"></div>
+      <div class="error-msg">Esse campo é obrigatório.</div>
+    </div>`;
+}
+
+function render(){
+  card.innerHTML = FIELDS.map(fieldHTML).join('') +
+    `<button class="btn-primary" id="submitBtn">Enviar</button>`;
+
+  const whatsappEl = document.getElementById('whatsapp');
+  whatsappEl.addEventListener('input', ()=>{
+    whatsappEl.value = maskPhone(whatsappEl.value);
+  });
+
+  document.getElementById('submitBtn').addEventListener('click', handleSubmit);
+}
+
+function collect(){
+  let valid = true;
+  FIELDS.forEach(f=>{
+    const fieldEl = document.querySelector(`[data-field="${f.id}"]`);
+    const value = document.getElementById(f.id).value.trim();
+    answers[f.id] = value;
+    if(f.required && !value){
+      valid = false;
+      fieldEl.classList.add('invalid');
+    } else {
+      fieldEl.classList.remove('invalid');
+    }
+  });
+  return valid;
+}
+
+function handleSubmit(){
+  if(!collect()) return;
+  submitForm();
+}
+
+async function submitForm(){
+  introBlock.style.display = 'none';
+  card.innerHTML = `
+    <div class="status-screen">
+      <div class="spinner"></div>
+      <h2 style="margin-top:14px;">Enviando…</h2>
+      <p>Só um instante.</p>
+    </div>`;
+
+  try{
+    if(!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.indexOf('COLE_AQUI') !== -1){
+      throw new Error('missing_url');
+    }
+
+    await fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      // text/plain evita complicações de CORS com o Apps Script
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify({
+        nomeOtica: answers['nome_otica'],
+        nomeRespondente: answers['nome_respondente'],
+        whatsapp: answers['whatsapp']
+      })
+    });
+
+    card.innerHTML = `
+      <div class="status-screen success">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6"/></svg></div>
+        <h2>Recebemos!</h2>
+        <p>Obrigado, ${escapeHtml(answers['nome_respondente'])}. Já vamos te chamar no WhatsApp.</p>
+      </div>`;
+  } catch(err){
+    card.innerHTML = `
+      <div class="status-screen error">
+        <div class="icon">!</div>
+        <h2>Não conseguimos enviar</h2>
+        <p>Tente novamente em alguns instantes.</p>
+        <button class="btn-primary" style="margin-top:16px;" onclick="location.reload()">Tentar novamente</button>
+      </div>`;
+  }
+}
+
+function escapeHtml(str){
+  const d = document.createElement('div');
+  d.textContent = str;
+  return d.innerHTML;
+}
+
+render();
+</script>
+</body>
+</html>
